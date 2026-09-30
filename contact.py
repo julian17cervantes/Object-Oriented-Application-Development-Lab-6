@@ -5,18 +5,16 @@ class Contact:
         self.ph = ph
         self.addr = addr
         self.city = city
-        self.city = zip
+        self.zip = zip
 
     def __lt__(self, other):
-        self.other = other
-        if other[0][1] == other[1][1]:
-            return other[0][0] > other[1][0]
-        else:
-            return other[0][1] > other[1][1]
+        if self.ln == other.ln:
+            return self.fn < other.fn
+        return self.ln < other.ln
 
 
     def __str__(self):
-        return self
+        return (f'{self.fn} {self.ln}\n{self.ph}\n{self.addr}\n{self.city} {self.zip}')
 
     def __rept__(self):
-        return self
+        return (f'{self.fn},{self.ln},{self.ph},{self.addr},{self.city},{self.city}')
