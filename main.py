@@ -6,14 +6,16 @@ def read_file():
     with open('addresses.txt') as file:
         for line in file:
             line = line.strip()
-            if line:
+            if line is None:
                 fn, ln, ph, addr, city, zip = line.split(',')
                 contacts.append(Contact(fn, ln, ph, addr, city, zip))
     contacts.sort()
     return contacts
 
 def write_file(contacts):
-    None
+    with open('addresses.txt', 'w') as file:
+        for contact in contacts:
+            file.write(repr(contact) + '\n')
 
 def get_menu_choice():
     None
