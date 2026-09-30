@@ -1,10 +1,9 @@
 import check_input
+from contact import Contact
 
 def read_file():
     contacts = []
-    with open('addresses.txt', 'r') as file:
-        temp = [] 
-    return contacts 
+    with open('addresses.txt')
 
 def write_file(contacts):
     None
