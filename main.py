@@ -18,7 +18,7 @@ def write_file(contacts):
             file.write(repr(cont) + '\n')
 
 def get_menu_choice():
-    return check_input.get_int_range('Rolodex Menu:\n1. Display Contacts\n2. Add Contacts\n3. Search Contacts\n4. Modify Contact\n5. Save and Quit', 1, 5)
+    return check_input.get_int_range('Rolodex Menu:\n1. Display Contacts\n2. Add Contacts\n3. Search Contacts\n4. Modify Contact\n5. Save and Quit\n', 1, 5)
 
 def modify_contact(cont):
     choice = 0
