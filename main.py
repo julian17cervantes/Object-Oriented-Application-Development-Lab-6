@@ -86,7 +86,7 @@ def display_contacts(contacts):
     # Displays the number of contacts and each contact in the list
     print(f'Number of contacts: {len(contacts)}')
     for i in range(len(contacts)):
-        print(f'{i + 1}. {contacts[i]}')
+        print(f'{i + 1}. {str(contacts[i])}')
 
 def add_contact(contacts):
     '''Adds a new contact to the list
@@ -130,10 +130,10 @@ def search_contacts(contacts):
     found = False
     for cont in contacts:
         if choice == 1 and cont.ln.lower() == info.lower():
-            print(cont)
+            print(str(cont))
             found = True
         elif choice == 2 and cont.zip == info:
-            print(cont)
+            print(str(cont))
             found = True
     if not found:
         print('No matches found.')
@@ -179,7 +179,7 @@ def main():
             if cont is None:
                 print('Contact not found.')
             else:
-                print(cont)
+                print(str(cont))
                 modify_contact(cont)
                 contacts.sort()
         elif choice == 5:
