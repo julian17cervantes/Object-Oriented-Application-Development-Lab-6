@@ -42,5 +42,15 @@ def display_contacts(contacts):
     for i in range(len(contacts)):
         print(f'{i + 1}. {contacts[i]}')
 
+def add_contact(contacts):
+    print('Enter new contact:')
+    fn = input('First name: ')
+    ln = input('Last name: ')
+    ph = input('Phone #: ')
+    addr = input('Address: ')
+    zip = input('Zip: ')
+    contacts.append(Contact(fn, ln, ph, addr, zip))
+    contacts.sort()
+
 def main():
     read_file()
