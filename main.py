@@ -77,4 +77,30 @@ def find_contact(contacts, fn, ln):
     return None
 
 def main():
-    read_file()
+    contacts = read_file()
+    choice = 0
+    while choice != 5:
+        choice = get_menu_choice()
+        if choice == 1:
+            display_contacts(contacts)
+        elif choice == 2:
+            add_contact(contacts)
+        elif choice == 3:
+            search_contacts(contacts)
+        elif choice == 4:
+            fn = input('Enter first name: ')
+            ln = input('Enter last name: ')
+            cont = find_contact(contacts, fn, ln)
+            if cont is None:
+                print('Contact not found.')
+            else:
+                print(cont)
+                modify_contact(cont)
+                contacts.sort()
+        elif choice == 5:
+            print('Saving Files...')
+            write_file(contacts)
+            print('Ending Program')
+
+if __name__ == '__main__':
+    main()
