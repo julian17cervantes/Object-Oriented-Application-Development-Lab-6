@@ -52,7 +52,7 @@ class Contact:
             str: the string representation of the contact
         '''
 
-        # Return a string with each piece of information on its own seperate line
+        # Return a string with each piece of information on its own separate line
         return (f'{self.fn} {self.ln}\n{self.ph}\n{self.addr}\n{self.city} {self.zip}')
 
     def __repr__(self):
@@ -62,5 +62,5 @@ class Contact:
             str: the contact in the format fn, ln, ph, addr, city, zip
         '''
 
-        # Return a string with each piece of  information seperated by a comma
+        # Return a string with each piece of information seperated by a comma
         return (f'{self.fn},{self.ln},{self.ph},{self.addr},{self.city},{self.zip}')
