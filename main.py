@@ -1,3 +1,8 @@
+# Julian Cervantes
+# Abdallah Salameh
+# Group 4
+# OpOverload - a program that manages a contact list
+
 import check_input
 from contact import Contact
 
