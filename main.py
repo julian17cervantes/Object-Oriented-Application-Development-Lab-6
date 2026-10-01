@@ -23,7 +23,7 @@ def get_menu_choice():
 def modify_contact(cont):
     choice = 0
     while choice != 7:
-        choice = check_input.get_int_range('Modify Menu:\n1. First name\n2. Lastname\n3. Phone\n4. Address\n5. City\n6. Zip\n7. Save\n', 1, 7)
+        choice = check_input.get_int_range('Modify Menu:\n1. First name\n2. Last name\n3. Phone\n4. Address\n5. City\n6. Zip\n7. Save\n', 1, 7)
         if choice == 1:
             cont.fn = input('Enter first name: ')
         elif choice == 2:
@@ -54,7 +54,7 @@ def add_contact(contacts):
     contacts.sort()
 
 def search_contacts(contacts):
-    choice = check_input.get_int_range('Search:\n1. Search by last name\n2. Search by zip', 1, 2)
+    choice = check_input.get_int_range('Search:\n1. Search by last name\n2. Search by zip\n', 1, 2)
     if choice == 1:
         info = input('Enter last name: ')
     else:
