@@ -52,5 +52,23 @@ def add_contact(contacts):
     contacts.append(Contact(fn, ln, ph, addr, zip))
     contacts.sort()
 
+def search_contacts(contacts):
+    choice = check_input.get_int_range('Search\n1. Search by last name\n2. Search by zip', 1, 2)
+    if choice == 1:
+        info = input('Enter last name: ')
+    else:
+        info = input('Enter zip code: ')
+
+    found = False
+    for cont in contacts:
+        if choice == 1 and cont.ln.lower() == info.lower():
+            print(cont)
+            found = True
+        elif choice == 2 and cont.zip == info:
+            print(cont)
+            found = True
+    if not found:
+        print('No matches found.')
+
 def main():
     read_file()
