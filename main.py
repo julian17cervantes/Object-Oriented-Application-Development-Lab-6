@@ -6,7 +6,7 @@ def read_file():
     with open('addresses.txt') as file:
         for line in file:
             line = line.strip()
-            if line is None:
+            if line:
                 fn, ln, ph, addr, city, zip = line.split(',')
                 contacts.append(Contact(fn, ln, ph, addr, city, zip))
     contacts.sort()
@@ -48,8 +48,9 @@ def add_contact(contacts):
     ln = input('Last name: ')
     ph = input('Phone #: ')
     addr = input('Address: ')
+    city = input('City: ')
     zip = input('Zip: ')
-    contacts.append(Contact(fn, ln, ph, addr, zip))
+    contacts.append(Contact(fn, ln, ph, addr, city, zip))
     contacts.sort()
 
 def search_contacts(contacts):
