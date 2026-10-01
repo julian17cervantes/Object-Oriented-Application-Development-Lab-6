@@ -18,12 +18,12 @@ def write_file(contacts):
             file.write(repr(cont) + '\n')
 
 def get_menu_choice():
-    return check_input.get_int_range('Rolodex Menu:\n1. Display Contacts\n2. Add Contacts\n3. Search Contacts\n4. Modify Contact\n5. Save and Quit\n', 1, 5)
+    return check_input.get_int_range('Rolodex Menu:\n1. Display Contacts\n2. Add Contact\n3. Search Contacts\n4. Modify Contact\n5. Save and Quit\n', 1, 5)
 
 def modify_contact(cont):
     choice = 0
     while choice != 7:
-        choice = check_input.get_int_range('Modify Menu:\n1. First Name\n2. Last Name\n3. Phone\n4. Address\n5. City\n6. Zip\n7. Save', 1, 7)
+        choice = check_input.get_int_range('Modify Menu:\n1. First name\n2. Lastname\n3. Phone\n4. Address\n5. City\n6. Zip\n7. Save\n', 1, 7)
         if choice == 1:
             cont.fn = input('Enter first name: ')
         elif choice == 2:
@@ -54,7 +54,7 @@ def add_contact(contacts):
     contacts.sort()
 
 def search_contacts(contacts):
-    choice = check_input.get_int_range('Search\n1. Search by last name\n2. Search by zip', 1, 2)
+    choice = check_input.get_int_range('Search:\n1. Search by last name\n2. Search by zip', 1, 2)
     if choice == 1:
         info = input('Enter last name: ')
     else:
@@ -99,7 +99,7 @@ def main():
                 modify_contact(cont)
                 contacts.sort()
         elif choice == 5:
-            print('Saving Files...')
+            print('Saving File...')
             write_file(contacts)
             print('Ending Program')
 
