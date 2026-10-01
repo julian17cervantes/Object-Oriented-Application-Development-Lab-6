@@ -17,4 +17,4 @@ class Contact:
         return (f'{self.fn} {self.ln}\n{self.ph}\n{self.addr}\n{self.city} {self.zip}')
 
     def __repr__(self):
-        return (f'{self.fn},{self.ln},{self.ph},{self.addr},{self.city},{self.city}')
+        return (f'{self.fn},{self.ln},{self.ph},{self.addr},{self.city},{self.zip}')
