@@ -37,5 +37,10 @@ def modify_contact(cont):
         elif choice == 6:
             cont.zip = input('Enter zip: ')
 
+def display_contacts(contacts):
+    print(f'Number of contacts: {len(contacts)}')
+    for i in range(len(contacts)):
+        print(f'{i + 1}. {contacts[i]}')
+
 def main():
     read_file()
