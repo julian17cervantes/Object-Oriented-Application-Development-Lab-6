@@ -70,5 +70,11 @@ def search_contacts(contacts):
     if not found:
         print('No matches found.')
 
+def find_contact(contacts, fn, ln):
+    for cont in contacts:
+        if cont.fn.lower() == fn.lower() and cont.ln.lower() == ln.lower():
+            return cont
+    return None
+
 def main():
     read_file()
